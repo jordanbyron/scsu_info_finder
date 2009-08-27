@@ -1,0 +1,60 @@
+---
+extension: html
+filter:    erb
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><%= @page.title %></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=556, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<script language="javascript" src="javascript/jquery-1.3.2.min.js"></script>
+	<link rel = "stylesheet" href = "css/index.css" />
+	
+	<script type="text/javascript">
+      $(document).ready(function(){
+
+    });
+  </script>
+</head>
+<body>
+<div id="content">
+	<table class="toolbar">
+	<tr>
+	  <td> 
+	    <a class="white button" id="help" href="help.html">Help</a>
+	  </td>
+	  <td>
+	  	<a class="blue button" id="home" href="index.html" <%= "style='display:none;'" if @page.title == "Information Finder" %>>Home</a>
+	  </td> 
+	  <td> 
+	  	<a class="white button" id="search" href="search.html">Search</a>
+	  </td>
+	 </tr>
+	</table>
+	<div id="title"><%= @content %></div>
+	<table class="toolbar bottom">
+    <tr>
+      <td> 
+        <a class="black button small" id="who" href="who.html">Who</a>
+      </td>
+      <td>
+      	<a class="black button small" id="when" href="when.html">When</a>
+      </td> 
+      <td> 
+      	<a class="black button small" id="where" href="where.html">Where</a>
+      </td>
+      <td> 
+      	<a class="black button small" id="how" href="how.html">How</a>
+      </td>
+      </tr>
+</table>
+<script type="text/javascript">
+    $("#<%= @page.title.downcase %>").removeClass("black").addClass("white");
+    $("a").click(function(e) { $("#content").load(e.target.href); return false; });
+</script>
+</div>
+</body>
+</html>
