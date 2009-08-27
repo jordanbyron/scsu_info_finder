@@ -1,3 +1,21 @@
 = SCSU Information Finder
 
-Website prototype constructed using Webby for Southern CT Universities CSC 334 Human Computer Interactions
+Website prototype constructed using Webby for SCSU's CSC 334 Human Computer Interactions Course
+
+== Usage
+
+Install the webby gem:
+
+  gem install webby
+
+Then build the site:
+
+  webby build
+
+OR
+
+  webby autobuild
+
+== Live Version
+
+http://www.southernct.info
