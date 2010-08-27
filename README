@@ -4,6 +4,8 @@ Website prototype constructed using Webby for SCSU's CSC 334 Human Computer Inte
 
 == Usage
 
+Webby seems to be broken in 1.9.1, so give 1.8.7 a try. Worked for me :)
+
 Install the webby gem:
 
   gem install webby
