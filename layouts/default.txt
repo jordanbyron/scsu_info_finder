@@ -46,6 +46,32 @@ filter:    erb
 	 </tr>
 	</table>
 	<div id="title"><%= @content %></div>
+	<div id="navigation">
+	  <table>
+      <tr>
+        <td> 
+        	<a class="black button small" id="what" href="what.html">What</a>
+        </td>       
+        <td>        
+        	<a class="black button small" id="when" href="when.html">When</a>
+        </td>       
+        <td>        
+        	<a class="black button small" id="where" href="where.html">Where</a>
+        </td>       
+      </tr>         
+      <tr>          
+        <td>        
+          <a class="black button small" id="who" href="who.html">Who</a>
+        </td>       
+        <td>        
+        	<a class="black button small" id="how" href="how.html">How</a>
+        </td>       
+        <td>        
+        	<a class="black button small" id="search" href="search.html">Search</a>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 </body>
 </html>

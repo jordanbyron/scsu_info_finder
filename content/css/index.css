@@ -139,9 +139,9 @@ body
 
 #title{
 	width: 415px;
-	height: 270px;
+	height: 100px;
 	
-	top: 150px;
+	top: 125px;
 	left: 79px;
 	position: fixed;
 	
@@ -178,8 +178,12 @@ body
 	width: 10%;
 }
 
-.bottom{
-	
-	position: absolute;
-	bottom: 0;
+#navigation{
+	width: 530px;
+	margin: 0 auto;
+	margin-top: 300px;
+}
+
+#navigation table{
+	width: 100%;
 }

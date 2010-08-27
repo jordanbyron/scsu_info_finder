@@ -9,7 +9,6 @@ Where
 
 <div id='text'>
 
-Thank You <br />
 Under Development
 
 </div>
