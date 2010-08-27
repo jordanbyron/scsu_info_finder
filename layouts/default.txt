@@ -13,6 +13,13 @@ filter:    erb
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<script language="javascript" src="javascript/jquery-1.3.2.min.js"></script>
 	<link rel = "stylesheet" href = "css/index.css" />
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("#<%= @page.title.downcase %>").removeClass("blue").addClass("white");
+      $("a").click(function(e) { $(document.body).load(e.target.href); return false; });
+	  });
+  </script>
+	
 </head>
 <body>
 <div id="content">
@@ -46,10 +53,6 @@ filter:    erb
       </td>
       </tr>
 </table>
-<script type="text/javascript">
-    $("#<%= @page.title.downcase %>").removeClass("blue").addClass("white");
-    $("a").click(function(e) { $("#content").load(e.target.href); return false; });
-</script>
 </div>
 </body>
 </html>
