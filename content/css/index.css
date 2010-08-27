@@ -170,6 +170,14 @@ body
 	width: 548px;
 }
 
+.toolbar td{
+	width: 20%;
+}
+
+.toolbar td.spacer{
+	width: 10%;
+}
+
 .bottom{
 	
 	position: absolute;

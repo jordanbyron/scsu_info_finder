@@ -16,8 +16,18 @@ filter:    erb
 	<script type="text/javascript">
 	  $(document).ready(function(){
 	    $("#<%= @page.title.downcase %>").removeClass("blue").addClass("white");
-      $("a").click(function(e) { $(document.body).load(e.target.href); return false; });
+      setupiPhoneClick();
 	  });
+	  
+	  function setupiPhoneClick(){
+	    $("a").click(function(e) {
+	      $(document.body).load(e.target.href, function(){
+	        setupiPhoneClick();
+	      }); 
+	      
+	      return false; 
+	    });
+	  }
   </script>
 	
 </head>
@@ -26,33 +36,16 @@ filter:    erb
 	<table class="toolbar">
 	<tr>
 	  <td> 
-	    <a class="black button" id="help" href="help.html">Help</a>
+	    <a class="white button" id="help" href="help.html">Help</a>
 	  </td>
+	  <td class="spacer"></td>
 	  <td>
-	  	<a class="white button" id="home" href="index.html" <%= "style='display:none;'" if @page.title == "Information Finder" %>>Home</a>
-	  </td> 
-	  <td> 
-	  	<a class="black button" id="search" href="search.html">Search</a>
+	  	<a class="black button" id="home" href="index.html" <%= "style='display:none;'" if @page.title == "Information Finder" %>>Back</a>
+	  </td>
 	  </td>
 	 </tr>
 	</table>
 	<div id="title"><%= @content %></div>
-	<table class="toolbar bottom">
-    <tr>
-      <td> 
-        <a class="blue button small" id="who" href="who.html">Who</a>
-      </td>
-      <td>
-      	<a class="blue button small" id="when" href="when.html">When</a>
-      </td> 
-      <td> 
-      	<a class="blue button small" id="where" href="where.html">Where</a>
-      </td>
-      <td> 
-      	<a class="blue button small" id="how" href="how.html">How</a>
-      </td>
-      </tr>
-</table>
 </div>
 </body>
 </html>
