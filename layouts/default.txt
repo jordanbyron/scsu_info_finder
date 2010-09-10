@@ -21,7 +21,9 @@ filter:    erb
 	  
 	  function setupiPhoneClick(){
 	    $("a").click(function(e) {
+	      var event = e;
 	      $(document.body).load(e.target.href, function(){
+	        $('#' + event.currentTarget.id).addClass('selected');
 	        setupiPhoneClick();
 	      }); 
 	      
@@ -41,7 +43,6 @@ filter:    erb
 	  <td class="spacer"></td>
 	  <td>
 	  	<a class="black button" id="home" href="index.html" <%= "style='display:none;'" if @page.title == "Information Finder" %>>Back</a>
-	  </td>
 	  </td>
 	 </tr>
 	</table>
